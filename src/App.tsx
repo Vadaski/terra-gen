@@ -1,4 +1,5 @@
 import { useMemo, useRef, useState } from "react";
+import SplashScreen from "./components/SplashScreen";
 import {
   TerrainViewport,
   type TerrainViewportHandle
@@ -84,6 +85,7 @@ export default function App(): JSX.Element {
   };
 
   return (
+    <SplashScreen>
     <div className="app-shell">
       <div className="viewport-wrap">
         <TerrainViewport ref={viewportRef} params={params} onStats={setStats} />
@@ -240,5 +242,6 @@ export default function App(): JSX.Element {
         )}
       </aside>
     </div>
+    </SplashScreen>
   );
 }
